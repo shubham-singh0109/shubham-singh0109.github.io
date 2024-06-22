@@ -2824,6 +2824,7 @@ input, select, textarea {
 				text-align: center;
 				border-radius: 100%;
 				font-size: 1.25rem;
+				
 			}
 
 		ul.icons.alt li .icon:before {
@@ -4383,9 +4384,9 @@ input, select, textarea {
 		}
 
 	#copyright {
-		color: #ffffff;
+		color:#ffffff;
 		position: relative;
-		color: rgba(255, 255, 255, 0.25);
+		/* color: rgba(255, 255, 255, 0.25); */
 		cursor: default;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 0.8rem;
