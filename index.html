@@ -6,6 +6,7 @@
 -->
 <html lang="en">
 	<head>
+
 		<link rel="icon" href="images/favicon.jpg" type="image/png">
 		<title>Shubham Singh | Portfolio</title>
 		<meta charset="utf-8" />
@@ -20,9 +21,21 @@
   			window.dataLayer = window.dataLayer || [];
   			function gtag(){dataLayer.push(arguments);}
   			gtag('js', new Date());
-
   			gtag('config', 'G-QMDFY70711');
 		</script>
+
+		<!-- Email tag (email.js) -->
+		<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+			<script type="text/javascript">
+			(function(){
+			emailjs.init({
+			publicKey: "NYMNAFSfkWbFfD-vz",
+			});
+			})();
+		</script>
+		<script src="email.js" ></script>	
 
 	</head>
 	<body class="is-preload">
@@ -49,19 +62,36 @@
 							}
 						</style>
 
-						<h2>Hello, I am</h2>
-						<h1>Shubham Singh</h1>
+			<h2>Hello, I'm</h2>
+				<h1>SHUBHAM SINGH</h1>
+
+					<div>
 						<h3>
-							[Data Scientist & Software Developer]
+							{I am a <em class="auto-type"></em>}
 						</h3>
+					</div>
+					<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+					<script>
+						var typed = new Typed(".auto-type",{
+							strings: ["Data Scientist", "Software Engineer", "Web/App Builder", "UI/UX Designer"],
+							typeSpeed: 100,
+							backSpeed: 50,
+							startDelay: 500,
+							backDelay: 1500,
+							loop: true,
+							showCursor: true
+						})
+					</script>
+
 						<h4>
 							<button>
 								<a href="mailto:itsshubham.singh01@gmail.com"
-								type="submit" style="font-size: 24px; color:yellowgreen ; text-decoration: none;">Hire Me</a>
+								type="submit" style="font-size: 24px; color:yellowgreen ; text-decoration: none;">Let's Talk</a>
 							</button>
 						</h4>
-						<div>"Crafting the technology with Craetivity and Prescision." <br/>
-							Building Tomorrow's Innovations Today! 
+						<div>
+							"Crafting the technology with Craetivity and Prescision." <br/>
+							Building Tomorrow's Innovations Today!
 						</div> 
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
@@ -132,7 +162,8 @@
 										</ul>
 									
 									<h3><a href="https://drive.google.com/file/d/19DC_Lz4nzyPjBSXo2_9rYRYYij8EoYu5/view?usp=drive_link" 
-										class="button large" target="_blank">DOWNLOAD</a></h3>
+											class="button large" target="_blank">DOWNLOAD</a>
+									</h3>
 									<p>"I am a dynamic professional aspiring to leverage my expertise in data science 
 										and software development to drive innovation and solve complex problems. With a 
 										robust background in both disciplines, I aim to integrate machine learning technology 
@@ -153,7 +184,7 @@
 									<header>
 										<h2><a href="https://github.com/shubham-singh0109/WebGenAI-Chatbot-Nextjs-14" target="_blank">
 										Next AI<br/>
-										Nextjs 14</a></h2>
+										NextJS 14</a></h2>
 									</header>
 									<a href="https://nextai-shubham-singhs-projects-d1be2dc1.vercel.app/" class="image fit" target="_blank"><img src="images/pic01.png" alt="" /></a>
 									<p>This application is the best example of how Nextjs 14 and generative AI are integrated.
@@ -166,8 +197,8 @@
 								</article>
 								<article>
 									<header>
-										<h2><a href="https://github.com/shubham-singh0109/Drapely_Ecommerce_React_UI_Showcase/tree/main" target="_blank">drapely: e-commerce<br />
-										reactjs</a></h2>
+										<h2><a href="https://github.com/shubham-singh0109/Drapely_Ecommerce_React_UI_Showcase/tree/main" target="_blank">Drapely: Ecommerce<br />
+										ReactJS</a></h2>
 									</header>
 									<a href="https://drapely-ecommerce.vercel.app/" class="image fit" target="_blank"><img src="images/pic02.png" alt="" /></a>
 									<p>An online store created using the React.js framework, showing the power React and Redux on UI Building for various components.
@@ -193,7 +224,7 @@
 								<article>
 									<header>
 										<h2><a href="https://github.com/shubham-singh0109/Blind" target="_blank">Third i<br />
-										react-native</a></h2>
+										React-Native</a></h2>
 									</header>
 									<a href="https://www.youtube.com/watch?v=TeqHGY_jMuE&ab_channel=PAC" class="image fit" target="_blank"><img src="https://i.pinimg.com/originals/79/d9/91/79d99193821a46f322a9f58c36f2e945.gif" alt="" /></a>
 									<p>Introducing Third i, a state-of-the-art cross-platform application that seamlessly blends visual and aural aspects. Our program employs state-of-the-art technology to turn photos into 
@@ -232,31 +263,27 @@
 
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<form onsubmit="event.preventDefault(); sendMail();">
 								<h2>Get In Touch</h2>
-								<p>
-									I'm always open to discussing new projects, creative ideas, or opportunities to be part 
-									of your vision. Feel free to reach out to me.
-								</p>
-								<!-- <div class="fields">
+								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+										<input type="text" name="name" id="name" required/>
 									</div>
 									<div class="field">
 										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
+										<input type="text" name="email" id="email" required/>
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
+										<textarea name="message" id="message" rows="3" required></textarea>
 									</div>
-								</div> -->
+								</div>
 								<ul class="actions">
 									<li>
-									<button>
-										<a href="mailto:itsshubham.singh01@gmail.com"
-										type="submit" style="font-size: 24px; color: gray; text-decoration: none;">Say Hello</a>
+									<button
+										type="submit" 
+										style="font-size: 24px; color: gray; text-decoration: none;">Send
 									</button>
 									</li>
 								</ul>

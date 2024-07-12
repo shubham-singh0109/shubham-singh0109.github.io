@@ -13,6 +13,20 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Email tag (email.js) -->
+		<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+			<script type="text/javascript">
+			(function(){
+			emailjs.init({
+			publicKey: "NYMNAFSfkWbFfD-vz",
+			});
+			})();
+		</script>
+		<script src="email.js" ></script>
+
 	</head>
 	<body class="is-preload">
 
@@ -22,7 +36,7 @@
 				<!-- Intro -->
 					<div
 					id="intro">
-						<h1>Academic Career</h1>
+						<h1>ACADEMIC CAREER</h1>
 						<p>
 							"From Engineering Excellence to Data Science Mastery: Bridging knowledge and innovation to shape the future of technology with academic rigor and practical expertise."
 						</p>
@@ -82,7 +96,7 @@
 
 								<article>
 								
-										<h3>Achievements</h3>
+										<h3>ACHIEVEMENTS</h3>
 									
 									
 									<p>In my Master's in Data Science program, I achieved proficiency in advanced analytics, machine learning, and data visualization, 
@@ -110,7 +124,7 @@
 								</article>
 
 								<article>
-									<h3>Achievements</h3>
+									<h3>ACHIEVEMENTS</h3>
 									<p>
 										While I was doing my Bachelor of Engineering in Electronics and Communication, I excelled in projects focusing on IoT, gaining valuable industry experience 
 										in software development and embedded systems. Achievements include leading teams in designing and implementing innovative solutions, earning accolades 
@@ -145,39 +159,34 @@
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-
-						<section>
-							<form method="post" action="#">
-								<h2>Get In Touch</h2>
-								<p>
-									I'm always open to discussing new projects, creative ideas, or opportunities to be part 
-									of your vision. Feel free to reach out to me.
-								</p>
-								<!-- <div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div> -->
-								<ul class="actions">
-									<li>
-									<button>
-										<a href="mailto:itsshubham.singh01@gmail.com"
-										type="submit" style="font-size: 24px; color: gray; text-decoration: none;">Say Hello</a>
-									</button>
-									</li>
-								</ul>
-							</form>
-						</section>
+				<footer id="footer">
+					<section>
+						<form onsubmit="event.preventDefault(); sendMail();">
+							<h2>Get In Touch</h2>
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" required/>
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" required/>
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="3" required></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li>
+								<button
+									type="submit" 
+									style="font-size: 24px; color: gray; text-decoration: none;">Send
+								</button>
+								</li>
+							</ul>
+						</form>
+					</section>
 
 						<section class="split contact">
 							<section class="alt">
