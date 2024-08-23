@@ -2220,7 +2220,7 @@ input, select, textarea {
 		button:hover,
 		.button:hover {
 			box-shadow: inset 0 0 0 2px #18bfef;
-			color: #18bfef !important;
+			color: #ef7518 !important;
 		}
 
 		input[type="submit"].primary,
@@ -2643,6 +2643,7 @@ input, select, textarea {
 			margin: 4rem 0;
 			width: 100%;
 			border-radius: 50px;
+			border: 4px solid rgb(78, 81, 241);
 		}
 
 			.image.main:first-child {
@@ -2665,8 +2666,11 @@ input, select, textarea {
 
 		}
 
+/* Images Custom */
+
 	a.image {
 		overflow: hidden;
+		border-radius: 20px;
 	}
 
 		a.image img {
