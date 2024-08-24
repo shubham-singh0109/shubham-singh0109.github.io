@@ -52,8 +52,8 @@
 					<div
 					id="intro">
 					
-					<div class="avatar">
-						<img src="images/graduation.png" alt="Education Logo">
+					<div class="avatar-container">
+						<img src="images/graduation.png" alt="Education Logo" class="avatar">
 					</div>
 
 					<style>
@@ -61,9 +61,22 @@
 							text-align: center;	
 							margin-bottom: 20px;
 						}
-						.avatar img {
-							width: 170px; 
+						.avatar {
+							width: 180px; 
 							height: auto;
+							transition: transform 1s ease;
+							animation: rotateY360 1s ease-in-out;
+						}
+						.avatar-container:hover .avatar {
+							transform: rotate(360deg);
+						}
+						@keyframes rotateY360 {
+						from {
+							transform: rotateY(0deg);
+						}
+						to {
+							transform: rotateY(360deg);
+						}
 						}
 					</style>
 
