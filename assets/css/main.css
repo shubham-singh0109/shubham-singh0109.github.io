@@ -2642,7 +2642,7 @@ input, select, textarea {
 			display: block;
 			margin: 4rem 0;
 			width: 100%;
-			border-radius: 50px;
+			border-radius: 25px;
 			border: 3px solid rgba(135, 135, 181, 0.787);
 		}
 
