@@ -50,8 +50,43 @@
 			domain="www.chatbase.co"
 			defer>
 			</script>
+		
+		<!-- Script for loader to the landing page -->
+		<script>
+			window.addEventListener("load", function() {
+			  setTimeout(function() {
+				document.getElementById("loader").style.display = "none";
+				document.getElementById("main-content").style.display = "block";
+			  }, 4000); // 4000ms = 4 seconds
+			});
+		  </script>
 
 	</head>
+
+	<!-- Setting the loader for the landing page -->
+	<div class="loader-container" id="loader">
+		<img src="images/loader_icon.gif" alt="Loading..." class="loader-logo">
+	  </div>
+	
+	  <style>
+		/* Loader container (full page overlay) */
+		.loader-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #ffffff; 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 10000;
+		}
+		/* Hide the main content initially */
+		#main-content {
+		display: none;
+		}
+	</style>
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
