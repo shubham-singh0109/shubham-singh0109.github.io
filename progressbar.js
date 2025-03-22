@@ -10,7 +10,7 @@ const progressCircle = document.querySelector('.progress-circle');
 const progressText = document.querySelector('.progress-text');
 
 // Update circular progress
-progressCircle.style.background = `conic-gradient(#4caf50 ${scrollPercentage}%, #ddd ${scrollPercentage}%)`;
+progressCircle.style.background = `conic-gradient(#b792e7 ${scrollPercentage}%, #ddd ${scrollPercentage}%)`;
 
 // Update percentage text
 progressText.textContent = `${Math.round(scrollPercentage)}%`;
